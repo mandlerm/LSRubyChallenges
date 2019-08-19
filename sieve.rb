@@ -4,22 +4,19 @@ class Sieve
     end
 
     def primes
-        primes = []
         full_array = *(2..@limit)
         
         full_array.each do |num|
-            primes << num
             count = 2
             while count * num <= @limit 
                 if full_array.index(num*count)
-                    puts num*count, full_array.index(num*count)
                     idx = full_array.index(num*count) 
                     full_array.delete_at(idx)
                 end
                 count += 1
             end
         end
-        # primes
+        full_array
     end
 end
 
