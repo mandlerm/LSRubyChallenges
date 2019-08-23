@@ -1,7 +1,7 @@
 class SumOfMultiples
 
   def initialize(*args)
-    @args =  args.empty? ? [3,5] :  args
+    @args = args.empty? ? [3,5] :  args
   end
 
   def to(limit)
