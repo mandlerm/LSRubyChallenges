@@ -9,7 +9,7 @@ class School
 
   def to_h
     sorted = {}
-    @roster.keys.sort.map {|key| sorted[key] = @roster[key].sort}
+    @roster.keys.sort.map  {|key| sorted[key] = @roster[key].sort}
     sorted
   end
 
