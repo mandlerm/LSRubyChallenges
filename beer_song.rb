@@ -1,10 +1,11 @@
 class BeerSong
-  def initialize()
 
+  def verse(starting_verse, ending_verse = nil)
+    return_current_verse(starting_verse)
   end
 
-  def verse(verse_number)
-   case (verse_number)
+  def return_current_verse(verse_number)
+    case (verse_number)
     when (3..99)
       "#{verse_number} bottles of beer on the wall, #{verse_number} bottles of beer.\nTake one down and pass it around, #{verse_number - 1} bottles of beer on the wall.\n"
     when 2
@@ -15,5 +16,6 @@ class BeerSong
       "No more bottles of beer on the wall, no more bottles of beer.\n" \
       "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
     end
+
   end
 end
