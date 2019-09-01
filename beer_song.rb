@@ -1,5 +1,6 @@
 class BeerSong
-  rubocop:disable Metrics/LineLength
+  # rubocop:disable Metrics/LineLength
+
   def verse(verse_number)
     case verse_number
     when (3..99)
@@ -23,6 +24,7 @@ class BeerSong
       starting_verse -= 1
     end
 
+    puts full_verse.join("")
     full_verse.join("")
     # (starting_verse..ending_verse).to_a.map { |v| return_current_verse(v)}
   end
