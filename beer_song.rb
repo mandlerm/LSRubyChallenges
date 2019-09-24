@@ -6,7 +6,7 @@ class BeerSong
     when (3..99)
       "#{verse_number} bottles of beer on the wall, #{verse_number} bottles of beer.\nTake one down and pass it around, #{verse_number - 1} bottles of beer on the wall.\n"
     when 2
-      "#{verse_number} bottles of beer on the wall, #{verse_number} bottles of beer.\nTake one down and pass it around, #{verse_number - 1} bottle of beer on the wall.\n"
+      "2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n"
     when 1
       "1 bottle of beer on the wall, 1 bottle of beer.\nTake it down and pass it around, no more bottles of beer on the wall.\n"
     else
@@ -16,17 +16,18 @@ class BeerSong
   end
 
   def verses(starting_verse, ending_verse)
-    full_verse = []
+    (starting_verse..ending_verse).map { |number| verse(number) }.join
+    # full_verse = []
 
-    while starting_verse >= ending_verse
-      full_verse << "#{verse(starting_verse)}\n"
+    # while starting_verse >= ending_verse
+    #   full_verse << "#{verse(starting_verse)}\n"
 
-      starting_verse -= 1
-    end
+    #   starting_verse -= 1
+    # end
 
-    puts full_verse.join("")
-    full_verse.join("")
-    # (starting_verse..ending_verse).to_a.map { |v| return_current_verse(v)}
+    # # puts full_verse.join("")
+    # full_verse.join
+    # # (starting_verse..ending_verse).to_a.map { |v| return_current_verse(v)}
   end
 
   def lyrics
