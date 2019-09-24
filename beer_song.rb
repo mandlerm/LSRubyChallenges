@@ -16,18 +16,7 @@ class BeerSong
   end
 
   def verses(starting_verse, ending_verse)
-    (starting_verse..ending_verse).map { |number| verse(number) }.join
-    # full_verse = []
-
-    # while starting_verse >= ending_verse
-    #   full_verse << "#{verse(starting_verse)}\n"
-
-    #   starting_verse -= 1
-    # end
-
-    # # puts full_verse.join("")
-    # full_verse.join
-    # # (starting_verse..ending_verse).to_a.map { |v| return_current_verse(v)}
+    (ending_verse..starting_verse).to_a.reverse.map { |number| verse(number) }.join("\n")
   end
 
   def lyrics
